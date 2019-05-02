@@ -1,0 +1,109 @@
+body {
+  background: #eee;  
+}
+
+.mainDiv{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: white;
+  z-index: 999;
+  transform: scale(0);  
+  
+}
+
+.mainDivtransform{ 
+  animation: chat 100ms linear 1 normal;   
+}
+
+.mainDivtransformReverse{ 
+  animation: chat 100ms linear 1 reverse;   
+}
+
+@keyframes chat { 
+  0% { 
+    transform: scale(0); 
+  } 
+  100% {     
+    transform: scale(1); 
+  } 
+}
+
+.redButtonNormal{
+  animation: but 100ms linear 1 normal;
+}
+
+.redButtonReverse{
+  animation: but 100ms linear 1 reverse;
+}
+
+@keyframes but { 
+  0% { 
+    opacity: 1; 
+  } 
+  100% {     
+    opacity: 0; 
+  } 
+}
+
+.form{
+  flex-basis: 90%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  
+}
+
+.button{
+  background-color: gray;
+  color: black;
+  border: 0px;
+  width: 90%;
+  margin: 5%;
+  height: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.label{
+  margin: 5%; 
+}
+
+.area{
+  width: 90%;
+  margin:  0 5% 0 5%;
+  height: 90px;
+}
+
+.redButton{
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 180px;
+  left: 180px;
+  cursor: pointer;
+  transition: 100ms;
+  z-index: 0;
+
+}
+
+.redButton:hover{
+  width: 50px;
+  height: 50px;  
+  top: 175px;
+  left: 175px;
+}
+
+.mainDivCallBackChat{
+  position: relative;
+  
+}
+
+.closed{
+  cursor: pointer;
+}
